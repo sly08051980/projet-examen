@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    padding-right: 1em;
+    padding-left: 1em;
+}
+h2,h3{
+    padding: 1em;
+    color: blue;
+}
+strong{
+    color: blueviolet;
+}
+b{
+    color: blueviolet; 
+}
+
+    /*==============================================================================
+    bas de page
+    ==============================================================================*/
+
+    footer{
+        background: linear-gradient(pink, purple);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+  
+    }
+    li{
+        list-style: none;
+    }
+
+    header{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      
+        }
+        
+     
+        .burger-check {
+            display: none;
+        }
+        
+        /*----------------------------------------------------
+         Définit la zone d'action pour le burger
+         incluant une étiquette pour la facilité d'utilisation
+        ----------------------------------------------------*/
+        .burger {
+            position: relative;
+            float: left;
+            margin-left: 10px;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+        }
+        
+        nav {   
+            position: relative;
+            float: left;
+            width: 100%;
+            margin: 0;
+            min-height: 50px;
+            background: linear-gradient(pink, purple);
+            overflow: hidden;
+        }
+        /*==============================================================================
+         Apparence du menu
+        ==============================================================================*/
+        /*--------------------------------------------------
+         Crée l'apparence de l'icône du hamburger
+         en utilisant le span interne et les pseudo-éléments
+        --------------------------------------------------*/
+        .burger span,
+        .burger span:before,
+        .burger span:after {
+            position: absolute;
+            content: '';
+            top: 22px;
+            width: 40px;
+            height: 4px;
+            background: #333;
+            border-radius: 0.2em;
+        }
+        /*------------------------------
+         Position de la barre supérieure
+        ------------------------------*/
+        .burger span:before {
+            top: -8px;
+        }
+        /*------------------------------
+         Position de la barre inférieure
+        ------------------------------*/
+        .burger span:after {
+            top: 8px;
+        }
+        /*==============================================================================
+         Animation du menu
+        ==============================================================================*/
+        /*----------------------------------------------
+         Définit la durée de tous les effets d'animation
+        ----------------------------------------------*/
+        *,
+        *:before,
+        *:after {
+            transition: all 0.3s;
+        }
+        /*----------------------------------------------
+         Suppression de la barre centrale sur le "check"
+        ----------------------------------------------*/
+        .burger-check:checked + .burger span {
+            height: -1;
+            width: 0;
+        }
+        /*-------------------------------------------------------------------
+         Déplace les barres supérieure et inférieure au milieu sur le "check"
+        -------------------------------------------------------------------*/
+        .burger-check:checked + .burger span:before,
+        .burger-check:checked + .burger span:after {
+            top: 6px;
+        }
+        
+        /*----------------------------------------------
+         Fait pivoter la barre supérieure sur le "check"
+        ----------------------------------------------*/
+        .burger-check:checked + .burger span:before {
+            transform: rotate(45deg);
+        }
+        /*--------------------------------------------
+         Fait pivoter la barre inférieure sur le check
+        --------------------------------------------*/
+        .burger-check:checked + .burger span:after {
+            transform: rotate(-45deg);
+        }
+        /*==============================================================================
+         Ajout des items du menu
+        ==============================================================================*/
+        nav ul {
+            position: relative;
+            float: left;
+            width: 100%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul a {
+            position: relative;
+            float: left;
+            width: 100%;
+            height: 0;
+            line-height: 50px;
+            padding: 0 15px;
+            text-decoration: none;
+            overflow: hidden;
+            color: #333;
+            text-align: left;
+            text-align: center;
+        }
+        .logo-text , h1{
+            text-align: center;
+            
+        }
+        
+        /*==============================================================================
+        Définir la hauteur de l'élément 'a' afin de faire apparaître le menu lors du "check"  
+        ==============================================================================*/
+        #main-nav:checked ~ ul a {
+            height: 50px;
+        }
+        /*==============================================================================
+        taille image
+        ==============================================================================*/
+        .slider img{
+            width: 100%;
+        }
+  

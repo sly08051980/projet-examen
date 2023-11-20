@@ -10,7 +10,7 @@ header{
   
     }
     
-    
+ 
     .burger-check {
         display: none;
     }
@@ -28,7 +28,7 @@ header{
         cursor: pointer;
     }
     
-    nav {	
+    nav {   
         position: relative;
         float: left;
         width: 100%;
@@ -71,7 +71,7 @@ header{
      Animation du menu
     ==============================================================================*/
     /*----------------------------------------------
-     Définit la	durée de tous les effets d'animation
+     Définit la durée de tous les effets d'animation
     ----------------------------------------------*/
     *,
     *:before,
@@ -132,51 +132,129 @@ header{
     }
     .logo-text , h1{
         text-align: center;
+        padding-bottom: 2em;
+        color: rgb(148,19,139);
     }
     
-    /* Définir la hauteur de l'élément 'a' afin de faire apparaître le menu lors du "check"  */
+    /*==============================================================================
+    Définir la hauteur de l'élément 'a' afin de faire apparaître le menu lors du "check"  
+    ==============================================================================*/
     #main-nav:checked ~ ul a {
         height: 50px;
     }
-
+    /*==============================================================================
+    taille image
+    ==============================================================================*/
     .slider img{
         width: 100%;
     }
 
-     #before, #next{
-        font-size: 50px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: opacity 0.3s ease;
-        opacity: 1;
-        position: absolute;
-        height: 100%;
-        
-       
-        color: rgba(226, 9, 9, 0.8);
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 10px;
-    } 
 
- .slider{
-    position: relative;
-    width: 100%;
+    /*==============================================================================
+    degradé vétérinaire ou toiletteur 
+    ==============================================================================*/
+#choix{
+
+    display: inline-block;
+background: linear-gradient(to left, rgb(148,19,139), rgb(87,13,82));
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+main .top p {
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 1em;
+}
+
+    /*==============================================================================
+    début carroussel
+    ==============================================================================*/
+
+
+#carousel-container {
+    width: 80%;
     margin: auto;
+    overflow: hidden;
+    padding-bottom: 5em;
+  }
+  
+  #carousel {
     display: flex;
-    align-items: center;
-} 
- #before {
-    padding-top: 2em;
-    left: 0;
-   
-}
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #prev, #next {
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    width: auto;
+    height: 46%;
+    padding: 16px;
+    margin-top: 7em;
+    color: blue;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background: linear-gradient(pink, purple);
 
-#next {
-    padding-top: 2em;
+}
+  
+  #next {
     right: 0;
-}
+    border-radius: 3px 0 0 3px;
+  }
+  
+    /*==============================================================================
+    fin carroussel
+    ==============================================================================*/
 
-#slider:hover #precedent,
-#slider:hover #suivant {
-    opacity: 1;
-} 
+    /*==============================================================================
+    bas de page
+    ==============================================================================*/
+
+    footer{
+        background: linear-gradient(pink, purple);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+  
+    }
+    li{
+        list-style: none;
+    }
+    .professionnel img{
+        width: 4%;
+        height: 4%;
+        margin-right: 3%;
+    }
+    .imgtext{
+        display: flex;
+      
+    }
+    h3{
+        text-align: center;
+        padding-bottom: 1em;
+        color: rgb(148,19,139);
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    button{
+        padding-top: 1em;
+        padding-bottom: 1em;
+        width: 40%;
+        background: linear-gradient(pink, purple);
+       
+    }

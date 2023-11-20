@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script type ="module" src="./assets/js/script.js">defer</script>
-    <script src="./assets/js/choise.js" defer></script>
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js" defer></script>
+   
+
     <title>Document</title>
 </head>
 <body>
@@ -25,23 +25,54 @@
         </nav>
         <!-- Fin menu humburger-->
 
-        <h1>Titre</h1>
+        <h1>Vetotoil</h1>
     </header>
 
 
     <main>
-        <p>Pour rechercher un <span id="choix">Vétérinaire</span></p>
+        <div class="top">
+                <p>Pour rechercher un <span id="choix">Vétérinaire</span></p>
+                <p>Veuillez vous connecter pour prendre rendez-vous directement en ligne avec votre professionnel </p>
 
-            <div class="slider">
-                <img src="./assets/images/images.jfif" alt="images veto" id="slide">
-                <div id="before" onclick="changeSlide(-1)">&lt;</div>
-                <div id="next" onclick="changeSlide(1)">&gt;</div>
+            <div id="carousel-container">
+                <div id="carousel"></div>
             </div>
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+        </div>
+        <div class="professionnel">
+                <h3>Vous êtes praticien ?</h3>
+                <div class="imgtext">
+                    <img src="assets/images/montre.png">
+                    <p>Libérez du temps médical grâce à la prise de rendez-vous en ligne</p>
+                </div>
+                <div class="imgtext">
+                    <img src="assets/images/oeil.png">
+                    <p>Développez l'activité de votre cabinet/salon selon vos besoins grâce à une meilleure visibilité en ligne</p>
+                </div>
+                <div class="imgtext">
+                    <img src="assets/images/telephone.png">
+                    <p>Gagnez en confort de travail au quotidien en réduisant les appels téléphoniques à votre cabinet</p>
+                </div>
+                <div class="btn">
+                    <button>Découvrir VETOTOIL Pour professionnel</button>
+                </div>
+        </div>
         
     </main>
 
     <footer>
+        <div class="gauche">
+            <li>Contact</li>
+            <li>Connexion</li>
+            <li>Inscription</li>
+        </div>
+        <div class="droite">
+            <li><a href="./assets/page/mentions-legales.html">RGPD</a></li>
+          
+        </div>
 
     </footer>
+
 </body>
 </html>
