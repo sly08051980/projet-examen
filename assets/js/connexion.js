@@ -1,6 +1,6 @@
 console.log("script connexion");
 
-
+let affichePassword = true;
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("submit").addEventListener('click', function(event) {
       const nomValue = document.getElementById('nom').value;
@@ -37,6 +37,20 @@ document.addEventListener('DOMContentLoaded', function() {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(email);
     }
+    
+  document.getElementById("oeil").addEventListener("click", function(){
+    console.log("click");
+    
+    let password = document.getElementById("password");
+    if (affichePassword){
+      
+      password.setAttribute("type",'text');
+      affichePassword=false;
+    }else{
+      password.setAttribute("type","password");
+      affichePassword=true;
+    } 
+  });
   });
   
 
