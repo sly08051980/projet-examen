@@ -1,0 +1,43 @@
+$color_1: blue;
+$color_2: blueviolet;
+$color_3: #333;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 0.3s;
+	&:before {
+		transition: all 0.3s;
+	}
+	&:after {
+		transition: all 0.3s;
+	}
+}
+body {
+	main {
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+}
+
+h2 {
+	padding: 1em;
+	color: $color_1;
+}
+h3 {
+	padding: 1em;
+	color: $color_1;
+}
+strong {
+	color: $color_2;
+}
+b {
+	color: $color_2;
+}
+
+li {
+	list-style: none;
+}
+
+

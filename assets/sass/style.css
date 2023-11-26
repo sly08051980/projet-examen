@@ -1,0 +1,286 @@
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.burger-check {
+  display: none;
+}
+.burger-check:checked + .burger span {
+  height: -1;
+  width: 0;
+}
+.burger-check:checked + .burger span:before {
+  top: 6px;
+  transform: rotate(45deg);
+}
+.burger-check:checked + .burger span:after {
+  top: 6px;
+  transform: rotate(-45deg);
+}
+
+.burger {
+  position: relative;
+  float: left;
+  margin-left: 10px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+.burger span {
+  position: absolute;
+  content: "";
+  top: 22px;
+  width: 40px;
+  height: 4px;
+  background: #333;
+  border-radius: 0.2em;
+}
+.burger span:before {
+  position: absolute;
+  content: "";
+  top: 22px;
+  width: 40px;
+  height: 4px;
+  background: #333;
+  border-radius: 0.2em;
+  top: -8px;
+}
+.burger span:after {
+  position: absolute;
+  content: "";
+  top: 22px;
+  width: 40px;
+  height: 4px;
+  background: #333;
+  border-radius: 0.2em;
+  top: 8px;
+}
+
+nav {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0;
+  min-height: 50px;
+  background: linear-gradient(pink, purple);
+  overflow: hidden;
+}
+nav ul {
+  position: relative;
+  float: left;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul a {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 0;
+  line-height: 50px;
+  padding: 0 15px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #333;
+  text-align: left;
+  text-align: center;
+}
+
+.logo-text {
+  text-align: center;
+  padding-bottom: 2em;
+  color: rgb(148, 19, 139);
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 2em;
+  color: rgb(148, 19, 139);
+}
+
+#main-nav:checked ~ ul a {
+  height: 50px;
+}
+
+footer {
+  background: linear-gradient(pink, purple);
+  text-align: center;
+  padding: 10px;
+}
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+*:before {
+  transition: all 0.3s;
+}
+*:after {
+  transition: all 0.3s;
+}
+
+body main {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+h2 {
+  padding: 1em;
+  color: blue;
+}
+
+h3 {
+  padding: 1em;
+  color: blue;
+}
+
+strong {
+  color: blueviolet;
+}
+
+b {
+  color: blueviolet;
+}
+
+li {
+  list-style: none;
+}
+
+main .connexion {
+  padding-bottom: 5em;
+}
+main .connexion p {
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 1em;
+}
+main .connexion fieldset {
+  padding: 1em;
+}
+main .connexion legend {
+  font-size: 18px;
+  color: rgb(148, 19, 139);
+}
+main .connexion .flex {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1em;
+}
+main .connexion .flex input {
+  font-size: 20px;
+}
+main .connexion .flex .password-container {
+  position: relative;
+}
+main .connexion .flex .password-container img {
+  width: 20px;
+  height: 20px;
+}
+main .connexion .flex .password-container .password-input {
+  padding-right: 30px;
+}
+main .connexion .flex .password-container .password-input .oeil-icon {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  font-family: "Roboto", sans-serif;
+}
+*:before {
+  transition: all 0.3s;
+}
+*:after {
+  transition: all 0.3s;
+}
+
+#choix {
+  display: inline-block;
+  background: linear-gradient(to left, rgb(148, 19, 139), rgb(87, 13, 82));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main .top p {
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 1em;
+}
+
+#carousel-container {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding-bottom: 5em;
+}
+
+#carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+#prev {
+  display: none;
+}
+
+#next {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+.professionnel img {
+  width: 4%;
+  height: 4%;
+  margin-right: 3%;
+}
+
+.imgtext {
+  display: flex;
+}
+
+h3 {
+  text-align: center;
+  padding-bottom: 1em;
+  color: rgb(148, 19, 139);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+button {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 40%;
+  background: linear-gradient(pink, purple);
+}
+
+/*# sourceMappingURL=style.css.map */

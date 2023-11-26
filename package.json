@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "sass": "^1.69.5",
     "typewriter-effect": "^2.21.0"
   }
 }
