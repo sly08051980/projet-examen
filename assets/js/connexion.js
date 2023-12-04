@@ -51,6 +51,22 @@ document.addEventListener('DOMContentLoaded', function() {
       affichePassword=true;
     } 
   });
+
+  document.getElementById("oeil-confirm").addEventListener("click", function(){
+    console.log("click");
+    
+    let password = document.getElementById("password");
+    if (affichePassword){
+      
+      password.setAttribute("type",'text');
+      affichePassword=false;
+    }else{
+      password.setAttribute("type","password");
+      affichePassword=true;
+    } 
+  });
+
+
   });
   
 

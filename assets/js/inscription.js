@@ -1,5 +1,5 @@
 console.log('inscription');
-
+let affichePassword = true;
 document.addEventListener('DOMContentLoaded',function(){
     document.getElementById("submite").addEventListener("click", function(event) {
         event.preventDefault();
@@ -37,5 +37,34 @@ document.addEventListener('DOMContentLoaded',function(){
     
         
     }
+
+    function voirPassword(inputId) {
+        const passwordInput = document.getElementById(inputId);
+      
+        if (affichePassword) {
+          passwordInput.setAttribute("type", "text");
+          affichePassword = false;
+        } else {
+          passwordInput.setAttribute("type", "password");
+          affichePassword = true;
+        }
+      }
+      
+      document.getElementById("oeil").addEventListener("click", function () {
+        voirPassword("password");
+      });
+      
+      document.getElementById("oeil-confirm").addEventListener("click", function () {
+        voirPassword("password-confirm");
+      });
+      
+
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.enterprise.ready(async () => {
+          const token = await grecaptcha.enterprise.execute('6LfLAx8pAAAAAHHRkBRJtfX-AKt_GOLNtoy8hOEY', {action: 'LOGIN'});
+        });
+      }
+  
  
 })

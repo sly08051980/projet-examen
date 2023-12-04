@@ -1,0 +1,17 @@
+{
+    "name": "regni/projet-examen",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Regni\\ProjetExamen\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sly08051980",
+            "email": "regnier.sylvain@yahoo.Fr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": { "google/cloud-recaptcha-enterprise": "^0.14.0"}
+}

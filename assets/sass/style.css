@@ -4,23 +4,29 @@ header {
   width: 100%;
 }
 
-.burger-check {
+.wave {
+  min-height: 20vh;
+  width: 100%;
+  background: linear-gradient(pink, purple);
+  position: relative;
+  display: flex;
+}
+.wave .burger-check {
   display: none;
 }
-.burger-check:checked + .burger span {
+.wave .burger-check:checked + .burger span {
   height: -1;
   width: 0;
 }
-.burger-check:checked + .burger span:before {
+.wave .burger-check:checked + .burger span:before {
   top: 6px;
   transform: rotate(45deg);
 }
-.burger-check:checked + .burger span:after {
+.wave .burger-check:checked + .burger span:after {
   top: 6px;
   transform: rotate(-45deg);
 }
-
-.burger {
+.wave .burger {
   position: relative;
   float: left;
   margin-left: 10px;
@@ -28,7 +34,7 @@ header {
   height: 60px;
   cursor: pointer;
 }
-.burger span {
+.wave .burger span {
   position: absolute;
   content: "";
   top: 22px;
@@ -37,7 +43,7 @@ header {
   background: #333;
   border-radius: 0.2em;
 }
-.burger span:before {
+.wave .burger span:before {
   position: absolute;
   content: "";
   top: 22px;
@@ -47,7 +53,7 @@ header {
   border-radius: 0.2em;
   top: -8px;
 }
-.burger span:after {
+.wave .burger span:after {
   position: absolute;
   content: "";
   top: 22px;
@@ -57,17 +63,23 @@ header {
   border-radius: 0.2em;
   top: 8px;
 }
-
-nav {
+.wave img {
+  width: 15%;
+}
+.wave svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.wave nav {
   position: relative;
   float: left;
   width: 100%;
   margin: 0;
   min-height: 50px;
-  background: linear-gradient(pink, purple);
   overflow: hidden;
 }
-nav ul {
+.wave nav ul {
   position: relative;
   float: left;
   width: 100%;
@@ -75,17 +87,14 @@ nav ul {
   margin: 0;
   padding: 0;
 }
-nav ul a {
+.wave nav ul a {
   position: relative;
   float: left;
   width: 100%;
   height: 0;
-  line-height: 50px;
-  padding: 0 15px;
   text-decoration: none;
   overflow: hidden;
   color: #333;
-  text-align: left;
   text-align: center;
 }
 
@@ -101,8 +110,11 @@ h1 {
   color: rgb(148, 19, 139);
 }
 
+#main-nav:checked ~ ul {
+  height: 150px;
+}
 #main-nav:checked ~ ul a {
-  height: 50px;
+  height: 30px;
 }
 
 footer {
